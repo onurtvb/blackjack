@@ -10,7 +10,9 @@
         <style>
 
             :root {
-                --background: #373944;  
+                --background: #373944;
+                --color: #df3131;
+                --hover: #e04e4e;
             }
 
             * {
@@ -25,6 +27,44 @@
 
             body {
                 background: var(--background) no-repeat;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+
+            button {
+                color: var(--color);
+                transition: 0.25s;
+                background: none;
+                border: 2px solid;
+                line-height: 1;
+                margin: 0.5em;
+                padding: 1em 2em;
+                font-size: 16px;
+            }
+
+            .register:hover, .login:hover, .logout:hover {
+                box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+                border-color: var(--hover);
+                transform: translateY(-0.25em);
+                color: #fff;
+            }
+
+            
+            .header {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                user-select: none;
+                padding: 5px;
+                justify-content: space-between;
+            }
+
+            .title {
+                font-size: 75px;
+                color: #fff;
             }
 
         </style>
@@ -32,11 +72,17 @@
 
     <body>
         <div class="main">
+
+                <div class="header">
+                    <img src="/static/logo.png" class="logo" width="70">
+                    <h1 class="title">Blackjack</h1>
+                </div>
+
             	{% if username %}
-                    <a href="/logout"><button>Logout</button></a>
+                    <a href="/logout"><button class="logout">Logout</button></a>
                 {% else %}
-                    <a href="/register"><button>Register</button></a><br>
-                    <a href="/login"><button>Login</button></a>
+                    <a href="/register"><button class="register">Register</button></a><br>
+                    <a href="/login"><button class="login">Login</button></a>
                 {% endif %}
         </div>
     </body>

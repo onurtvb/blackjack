@@ -25,8 +25,7 @@ def register():
         username = request.form['username']
         pwd = request.form['password']
         cur.execute('SELECT * FROM players WHERE username = %s', (username,))
-        r = cur.fetchone()
-        if r is not None:
+        if cur.fetchone() is not None:
             return render_template('error.html', error='username already exists')
         else:
             cur.execute('INSERT INTO players VALUES (%s,%s,%s,%s)', (username,pwd,0,0,))
@@ -46,8 +45,7 @@ def login():
         username = request.form['username']
         pwd = request.form['password']
         cur.execute('SELECT * FROM players WHERE username = %s AND password = %s', (username,pwd,))
-        r = cur.fetchone()
-        if r is not None:
+        if cur.fetchone() is not None:
             session['username'] = username
             return redirect('/')
         else:

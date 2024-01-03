@@ -1,18 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Login - By onur_</title>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="author" content="onur_">
-    <link href="/static/favicon.ico" rel="icon">
-</head>
-<body>
-    <p>Login</p><br>
-    <form action="#" method="post">
-        <input type="text" name="username" placeholder="your username"/>
-        <input type="password" name="password" placeholder="your password"/>
-        <input type="submit" value="Submit"/>
-    </form>
-</body>
+    <head>
+        <title>Login - By onur_</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+        <meta name="author" content="onur_">
+        <link href="/static/favicon.ico" rel="icon">
+        <style>
+
+            :root {
+                --background: #373944;
+                --color: #df3131;
+                --hover: #e04e4e;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            html {
+                height: 100%;
+                width: 100%;
+            }
+
+            body {
+                background: var(--background) no-repeat;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+
+            form {
+                display: grid;
+            }
+
+            form input, form button {
+                background: none; 
+                margin: 5px;
+                border: 2px solid;
+                color: var(--color);
+                padding: 0.5em;
+                font-size: 18px;
+            }
+
+            form input:hover, form button:hover {
+                box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+                border-color: var(--hover);
+            }
+
+            .sub {
+                font-weight: bold;
+            }
+
+            ::placeholder {
+                text-align: center;
+                color: #fff;
+            }
+
+            .header {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                user-select: none;
+                padding: 5px;
+                justify-content: space-between;
+            }
+
+            .title {
+                font-size: 75px;
+                color: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+
+            <div class="header">
+                <img src="/static/logo.png" class="logo" width="70">
+                <h1 class="title">Blackjack</h1>
+            </div>
+
+            <br>
+
+            <form action="#" method="post">
+                <input type="text" name="username" placeholder="Username" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <input type="submit" class="sub" value="Login"/>
+            </form>
+
+        </div>
+    </body>
 </html>
