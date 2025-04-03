@@ -1,11 +1,5 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-/blackjack.iml
-/compiler.xml
-/encodings.xml
-/jarRepositories.xml
-/misc.xml
-/vcs.xml
 ../target/*
 ../pom.xml
