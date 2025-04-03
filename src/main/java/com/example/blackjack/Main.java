@@ -2,7 +2,7 @@ package com.example.blackjack;
 
 import javafx.animation.PauseTransition;
 import javafx.application.Application;
-import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.util.*;
 
 public class Main extends Application {
@@ -31,8 +32,23 @@ public class Main extends Application {
     static Pane root = new Pane();
     static Scene scene = new Scene(root, 857, 500);
     static Button btnStai = new Button("Stai");
-
+/*
     public void start(Stage stage) {
+        FXMLLoader fxmlLoader = new FXMLLoader(IntroController.class.getResource("hello-view.fxml"));
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlLoader.load() ,600, 400);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+ */
+
+    public void start(Stage stage){
         stage.setTitle("BlackJack");
         stage.getIcons().add(new Image(getClass().getResource("/icon.jpg").toString()));
         stage.setScene(scene);
@@ -262,7 +278,7 @@ public class Main extends Application {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(Stage args) {
         launch();
     }
 }
