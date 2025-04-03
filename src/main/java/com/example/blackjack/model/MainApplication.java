@@ -1,8 +1,8 @@
-package com.example.blackjack;
+package com.example.blackjack.model;
 
+import com.example.blackjack.Carta;
 import javafx.animation.PauseTransition;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,10 +13,9 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import javax.swing.*;
-import java.io.IOException;
 import java.util.*;
 
-public class Main extends Application {
+public class MainApplication extends Application {
     final int WIDTH = 120;
     final int HEIGHT = 150;
 
@@ -34,7 +33,7 @@ public class Main extends Application {
     static Button btnStai = new Button("Stai");
 /*
     public void start(Stage stage) {
-        FXMLLoader fxmlLoader = new FXMLLoader(IntroController.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(IntroController.class.getResource("intro.fxml"));
         Scene scene = null;
         try {
             scene = new Scene(fxmlLoader.load() ,600, 400);
