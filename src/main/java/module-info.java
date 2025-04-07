@@ -1,13 +1,13 @@
-module com.example.blackjack {
+module com.blackjack {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
 
 
-    opens com.example.blackjack to javafx.fxml;
-    exports com.example.blackjack;
-    exports com.example.blackjack.controller;
-    opens com.example.blackjack.controller to javafx.fxml;
-    exports com.example.blackjack.model;
-    opens com.example.blackjack.model to javafx.fxml;
+    opens com.blackjack to javafx.fxml;
+    exports com.blackjack;
+    exports com.blackjack.controller;
+    opens com.blackjack.controller to javafx.fxml;
+    exports com.blackjack.model;
+    opens com.blackjack.model to javafx.fxml;
 }
